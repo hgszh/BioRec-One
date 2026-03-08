@@ -13,10 +13,13 @@
 
 ## 目录结构
 ```
-├── hardware/    # 立创EDA Pro 工程、原理图、Gerber
-├── firmware/    # FPGA（高云云源）与 MCU（ESP-IDF）工程
-├── docs/        # 详细文档（施工中）
-└── examples/    # 示例 CSV / BDF 数据
+├── hardware/           # 立创EDA Pro 工程、原理图、Gerber
+│   ├── afe/            # 模拟前端模块
+│   ├── power-iso/      # ±5V 隔离电源模块
+│   └── mainboard/      # 主板
+├── firmware/           # FPGA（高云云源）与 MCU（ESP-IDF）工程，含烧录指南
+├── docs/               # 详细文档（施工中）
+└── examples/           # 示例 CSV / BDF 数据
 ```
 
 ## License
