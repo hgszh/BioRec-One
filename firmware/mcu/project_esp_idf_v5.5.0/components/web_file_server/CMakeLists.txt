@@ -1,0 +1,15 @@
+idf_component_register(
+    SRC_DIRS "."
+    INCLUDE_DIRS "."
+    EMBED_FILES "assets/favicon.ico"
+                "assets/upload.html"
+                "assets/file_list_1.html"
+                "assets/file_list_2.html"
+                "assets/styles.css"
+    REQUIRES "esp_http_server"
+             "vfs"
+             "esp_wifi"
+             "nvs_flash"
+             "esp_driver_sdmmc"
+             "fatfs"
+)

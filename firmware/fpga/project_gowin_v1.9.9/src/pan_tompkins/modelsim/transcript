@@ -1,0 +1,98 @@
+# Reading D:/ModelSim/tcl/vsim/pref.tcl
+# //  ModelSim SE-64 10.6d Feb 24 2018
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# OpenFile C:/Users/hgszh/Desktop/fpga_ecg/src/pan_tompkins/modelsim/pt.mpf
+# Loading project pt
+vsim -novopt work.tb_pan_tompkins
+# vsim -novopt work.tb_pan_tompkins 
+# Start time: 01:03:41 on Jul 26,2025
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Loading work.tb_pan_tompkins
+# Loading work.PAN_TOMPKINS
+# Loading work.MS5_TIMER
+# Loading work.REFR_GATE
+# Loading work.PRE_PROCESSOR
+# Loading work.PT_IIR_LPF
+# Loading work.PT_IIR_HPF
+# Loading work.FIR_DERIVATIVE
+# Loading work.SQUARE
+# Loading work.MOVAVG_32
+# Loading work.FIND_PEAK
+# Loading work.MEDIAN_9
+add wave -position insertpoint  \
+sim:/tb_pan_tompkins/uut/i_data
+add wave -position insertpoint  \
+sim:/tb_pan_tompkins/data_in
+add wave -position insertpoint  \
+sim:/tb_pan_tompkins/o_r_peak_pulse \
+sim:/tb_pan_tompkins/o_rr_interval_ms
+add wave -position insertpoint  \
+sim:/tb_pan_tompkins/uut/detection_threshold
+add wave -position insertpoint  \
+sim:/tb_pan_tompkins/uut/ns_peak_estimator_o_data
+add wave -position insertpoint  \
+sim:/tb_pan_tompkins/uut/r_peak_estimator_o_data
+restart
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+run
+# Read 2267 samples from CSV
+# Causality operation skipped due to absence of debug database file
+add wave -position insertpoint  \
+sim:/tb_pan_tompkins/uut/ecg_preprocessor/o_data
+restart
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+run
+# Read 2267 samples from CSV
+# Compile of pan_tompkins.v was successful.
+# Compile of pan_tompkins_utils.v was successful.
+# Compile of tb_pan_tompkins.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Loading work.tb_pan_tompkins
+# Loading work.PAN_TOMPKINS
+# Loading work.MS5_TIMER
+# Loading work.REFR_GATE
+# Loading work.PRE_PROCESSOR
+# Loading work.PT_IIR_LPF
+# Loading work.PT_IIR_HPF
+# Loading work.FIR_DERIVATIVE
+# Loading work.SQUARE
+# Loading work.MOVAVG_32
+# Loading work.FIND_PEAK
+# Loading work.MEDIAN_9
+run
+# Read 2267 samples from CSV
+# Compile of pan_tompkins.v was successful.
+# Compile of pan_tompkins_utils.v was successful.
+# Compile of tb_pan_tompkins.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
+# Loading work.tb_pan_tompkins
+# Loading work.PAN_TOMPKINS
+# Loading work.MS5_TIMER
+# Loading work.REFR_GATE
+# Loading work.PRE_PROCESSOR
+# Loading work.PT_IIR_LPF
+# Loading work.PT_IIR_HPF
+# Loading work.FIR_DERIVATIVE
+# Loading work.SQUARE
+# Loading work.MOVAVG_32
+# Loading work.FIND_PEAK
+# Loading work.MEDIAN_9
+run
+# Read 2267 samples from CSV
+# End time: 02:34:26 on Jul 26,2025, Elapsed time: 1:30:45
+# Errors: 0, Warnings: 1

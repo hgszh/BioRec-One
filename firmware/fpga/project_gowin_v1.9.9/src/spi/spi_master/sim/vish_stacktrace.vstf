@@ -1,0 +1,34 @@
+# Current time Fri May 30 03:24:34 2025
+# ModelSim SE Stack Trace
+# Program = vish
+# Id = "10.6d"
+# Version = "2018.02"
+# Date = "Feb 24 2018"
+# Platform = win64
+
+Exception c0000005 has occurred at address 4032640f. Traceback:
+# 0    0x4032640f: 'Mtirpc_Init + 0x17543f'
+# 1    0x401e8eb2: 'Mtirpc_Init + 0x37ee2'
+# 2    0x4023ba6f: 'Mtirpc_Init + 0x8aa9f'
+# 3    0x401ff457: 'Mtirpc_Init + 0x4e487'
+# 4    0x401f439c: 'Mtirpc_Init + 0x433cc'
+# 5    0x6fde6c03: 'TclNRRunCallbacks + 0x63'
+# 6    0xe0a30bfa: 'Itcl_EvalMemberCode + 0x3ba'
+# 7    0xe0a31dbb: 'Itcl_ExecMethod + 0x23b'
+# 8    0xe0a39879: 'Itcl_EvalArgs + 0x1c9'
+# 9    0xe0a34b51: 'Itcl_HandleInstance + 0x2c1'
+# 10   0x6fde6c03: 'TclNRRunCallbacks + 0x63'
+# 11   0x6fde6c03: 'TclNRRunCallbacks + 0x63'
+# 12   0x6feb92e2: 'TclpRealloc + 0xa02'
+# 13   0x6feb965c: 'TclServiceIdle + 0x9c'
+# 14   0x6fe8d0c3: 'Tcl_DoOneEvent + 0x133'
+# 15   0x7058aee5: 'Tk_MainLoop + 0x25'
+# 16   0x705cd282: 'Tk_MainEx + 0x932'
+# 17   0x401d3280: 'Mtirpc_Init + 0x222b0'
+# 18   0x401d58b8: 'Mtirpc_Init + 0x248e8'
+# 19   0x405f02cf: 'Tclsqlite_Init + 0x1a5f'
+# 20   0x481fe8d7: 'BaseThreadInitThunk + 0x17'
+# 21   0x4a23c5dc: 'RtlUserThreadStart + 0x2c'
+StackWalk failed 0
+# End of Stack Trace
+

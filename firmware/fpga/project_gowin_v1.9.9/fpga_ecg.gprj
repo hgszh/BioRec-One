@@ -1,0 +1,24 @@
+<?xml version="1" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project>
+    <Template>FPGA</Template>
+    <Version>5</Version>
+    <Device name="GW1NR-9C" pn="GW1NR-LV9QN88PC6/I5">gw1nr9c-004</Device>
+    <FileList>
+        <File path="src/ad_da/ads1259.v" type="file.verilog" enable="1"/>
+        <File path="src/ad_da/dac8830.v" type="file.verilog" enable="1"/>
+        <File path="src/fifo_sc/fifo_16.v" type="file.verilog" enable="1"/>
+        <File path="src/fifo_sc/fifo_24.v" type="file.verilog" enable="1"/>
+        <File path="src/filter_process/filter_process.sv" type="file.verilog" enable="1"/>
+        <File path="src/led/led.v" type="file.verilog" enable="1"/>
+        <File path="src/pan_tompkins/pan_tompkins.v" type="file.verilog" enable="1"/>
+        <File path="src/spi/bus_control/bus_control.v" type="file.verilog" enable="1"/>
+        <File path="src/spi/spi_master/source/SPI_Master.v" type="file.verilog" enable="1"/>
+        <File path="src/spi/spi_master/source/SPI_Master_With_Single_CS.v" type="file.verilog" enable="1"/>
+        <File path="src/spi/spi_mode0_slave/spi_slave.v" type="file.verilog" enable="1"/>
+        <File path="src/top.sv" type="file.verilog" enable="1"/>
+        <File path="src/fpga_ecg.cst" type="file.cst" enable="1"/>
+        <File path="src/fpga_ecg.sdc" type="file.sdc" enable="1"/>
+        <File path="src/fpga_ecg.rao" type="file.gao" enable="0"/>
+    </FileList>
+</Project>

@@ -1,0 +1,57 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/ModelSim/examples
+vSPI_Master
+Z0 !s110 1748546731
+!i10b 1
+!s100 <7?dh6dVDz8>IKkLPlO]G1
+IBFjh0`K^J_Sc3o<E_dNMg2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/hgszh/Desktop/ADS1259/spi_master/sim
+w1748543921
+8C:/Users/hgszh/Desktop/ADS1259/spi_master/source/SPI_Master.v
+FC:/Users/hgszh/Desktop/ADS1259/spi_master/source/SPI_Master.v
+L0 33
+Z3 OL;L;10.6d;65
+r1
+!s85 0
+31
+Z4 !s108 1748546731.000000
+!s107 C:/Users/hgszh/Desktop/ADS1259/spi_master/source/SPI_Master.v|
+!s90 -reportprogress|300|-work|work|-novopt|-stats=none|C:/Users/hgszh/Desktop/ADS1259/spi_master/source/SPI_Master.v|
+!i113 1
+o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z5 tCvgOpt 0
+n@s@p@i_@master
+vSPI_Master_TB
+DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+R0
+!i10b 1
+!s100 :BR]Xjd5d<?_Zn62nA;V23
+IFe<deSo_7`Q7HOWFzzH>@3
+R1
+!s105 SPI_Master_TB_sv_unit
+S1
+R2
+w1748546724
+8C:/Users/hgszh/Desktop/ADS1259/spi_master/sim/SPI_Master_TB.sv
+FC:/Users/hgszh/Desktop/ADS1259/spi_master/sim/SPI_Master_TB.sv
+L0 6
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/hgszh/Desktop/ADS1259/spi_master/sim/SPI_Master_TB.sv|
+!s90 -reportprogress|300|-work|work|-novopt|-sv|-stats=none|C:/Users/hgszh/Desktop/ADS1259/spi_master/sim/SPI_Master_TB.sv|
+!i113 1
+o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R5
+n@s@p@i_@master_@t@b

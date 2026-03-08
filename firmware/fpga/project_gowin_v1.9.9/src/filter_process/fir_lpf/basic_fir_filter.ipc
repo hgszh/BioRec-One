@@ -1,0 +1,16 @@
+[General]
+ipc_version=4
+file=basic_fir_filter
+module=Basic_FIR_Filter_Top
+target_device=gw1nr9c-004
+type=basic_fir
+version=1.0
+
+[Config]
+DISABLE_IO_INSERTION=true
+INPUT_COEFFICIENT_WIDTH=24
+INPUT_DATA_WIDTH=24
+LANG=0
+MUTL_ARRAY_LENTH=2
+Synthesis_tool=GowinSynthesis
+TAPSIZE=200

@@ -1,0 +1,15 @@
+C:/Users/hgszh/Desktop/ADS1259/spi_master/source/SPI_Master.v {1 {vlog -work work -novopt -stats=none C:/Users/hgszh/Desktop/ADS1259/spi_master/source/SPI_Master.v
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module SPI_Master
+
+Top level modules:
+	SPI_Master
+
+} {} {}} C:/Users/hgszh/Desktop/ADS1259/spi_master/sim/SPI_Master_TB.sv {1 {vlog -work work -novopt -sv -stats=none C:/Users/hgszh/Desktop/ADS1259/spi_master/sim/SPI_Master_TB.sv
+Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
+-- Compiling module SPI_Master_TB
+
+Top level modules:
+	SPI_Master_TB
+
+} {} {}}

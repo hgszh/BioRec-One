@@ -1,0 +1,120 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>ECG File Server</title>
+  <link href="/styles.css" rel="stylesheet" />
+
+  <script>
+    function getPath() {
+      const pathname = window.location.pathname;
+      return pathname;
+    }
+
+    function setUIBusyState(isBusy) {
+      // 禁用/启用 所有删除按钮
+      document.querySelectorAll('.deleteButton').forEach(button => {
+        button.disabled = isBusy;
+      });
+      // 禁用/启用 上传和刷新按钮
+      const uploadButton = document.getElementById('upload-button');
+      const refreshButton = document.getElementById('refresh-button');
+      // 禁用/启用 所有的文件和文件夹链接
+      const fileLinks = document.querySelectorAll('.file a, .directory a, .folder a');
+      if (isBusy) {
+        // --- 禁用所有可交互元素 ---
+        uploadButton.style.pointerEvents = 'none';
+        uploadButton.style.opacity = '0.5';
+        refreshButton.style.pointerEvents = 'none';
+        refreshButton.style.opacity = '0.5';
+        fileLinks.forEach(link => {
+          link.style.pointerEvents = 'none'; // 让链接不可点击
+          link.style.opacity = '0.5';       // 视觉上调暗
+        });
+      } else {
+        // --- 恢复所有可交互元素 ---
+        uploadButton.style.pointerEvents = 'auto';
+        uploadButton.style.opacity = '1';
+        refreshButton.style.pointerEvents = 'auto';
+        refreshButton.style.opacity = '1';
+        fileLinks.forEach(link => {
+          link.style.pointerEvents = 'auto';
+          link.style.opacity = '1';
+        });
+      }
+    }
+
+    //  deleteFile function with English prompts and auto-reload
+    async function deleteFile(filepath) {
+      const decodedFilepath = decodeURIComponent(filepath);
+      if (!confirm(`Are you sure you want to delete ${decodedFilepath}?`)) {
+        return;
+      }
+      setUIBusyState(true);
+      try {
+        const deleteResponse = await fetch(`/delete${filepath}`, { method: 'POST' });
+        if (![200, 303].includes(deleteResponse.status)) {
+          const errorText = await deleteResponse.text();
+          alert('Failed to delete the file: ' + (errorText || 'Unknown error.'));
+          setUIBusyState(false); // Only unlock UI on failure
+        } else {
+          // On success, the page will reload automatically
+          location.reload();
+        }
+      } catch (error) {
+        console.error('Error occurred:', error);
+        alert('A network error occurred while processing your request.');
+        setUIBusyState(false); // Unlock UI on network failure
+      }
+      // No 'finally' block needed, as success reloads the page
+    }
+
+    // Function to handle the download prompt
+    function downloadFileWithPrompt(anchor) {
+      // Disable UI elements except for the refresh button
+      setUIBusyState(true);
+      document.getElementById('refresh-button').style.pointerEvents = 'auto';
+      document.getElementById('refresh-button').style.opacity = '1';
+      window.location.href = anchor.href;
+      setTimeout(() => { location.reload(); }, 1000);
+    }
+
+  </script>
+</head>
+
+<div class="header link-white">
+  <div class="header-left">
+    <a href="/" class="text-bold"> Home </a>&gt;
+    <span id="path"></span>
+  </div>
+  <div class="header-center">ECG File Server</div>
+  <div class="header-right">
+  </div>
+</div>
+
+<div class="link-white buttons-wrap">
+  <div class="buttons-container">
+    <a id="refresh-button" class="refresh-button button" href="">
+      Refresh
+    </a>
+    <a id="upload-button" class="upload-button button" href="/upload.html#%2F">
+      Upload
+    </a>
+  </div>
+</div>
+
+<div class="table_component link-white">
+  <table>
+    <thead>
+      <tr>
+        <td>File Name</td>
+        <td>Size</td>
+        <td>Actions</td>
+      </tr>
+    </thead>
+    <tbody id="file-list">
+      <tr id="parent-path-table-row">
+        <td class="folder"><a href="../">.. (Parent Path)</a></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <!-- Add files here -->

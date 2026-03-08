@@ -1,0 +1,330 @@
+[
+ {
+  "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/top.sv",
+  "InstLine" : 1,
+  "InstName" : "top",
+  "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/top.sv",
+  "ModuleLine" : 1,
+  "ModuleName" : "top",
+  "SubInsts" : [
+   {
+    "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/top.sv",
+    "InstLine" : 27,
+    "InstName" : "ads1259",
+    "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/ad_da/ads1259.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "ADS1259",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/ad_da/ads1259.v",
+      "InstLine" : 21,
+      "InstName" : "ads1259_spi",
+      "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/spi/spi_master/source/SPI_Master.v",
+      "ModuleLine" : 33,
+      "ModuleName" : "SPI_Master"
+     }
+    ]
+   },
+   {
+    "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/top.sv",
+    "InstLine" : 37,
+    "InstName" : "afe_fast_recovery",
+    "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/ad_da/ads1259.v",
+    "ModuleLine" : 160,
+    "ModuleName" : "OVLD_FAST_RECOVERY"
+   },
+   {
+    "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/top.sv",
+    "InstLine" : 53,
+    "InstName" : "filter_process",
+    "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/filter_process/filter_process.sv",
+    "ModuleLine" : 6,
+    "ModuleName" : "FILTER_PROCESS",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/filter_process/filter_process.sv",
+      "InstLine" : 58,
+      "InstName" : "lpf_filter",
+      "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/filter_process/fir_lpf/fir_lpf.sv",
+      "ModuleLine" : 6,
+      "ModuleName" : "FIR_FILTER",
+      "SubInsts" : [
+       {
+        "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/filter_process/fir_lpf/fir_lpf.sv",
+        "InstLine" : 44,
+        "InstName" : "basic_fir_filter_inst",
+        "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/filter_process/fir_lpf/basic_fir_filter.v",
+        "ModuleLine" : 1773,
+        "ModuleName" : "Basic_FIR_Filter_Top",
+        "SubInsts" : [
+         {
+          "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/filter_process/fir_lpf/basic_fir_filter.v",
+          "InstLine" : 1798,
+          "InstName" : "Basic_FIR_Filter_cor",
+          "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/filter_process/fir_lpf/basic_fir_filter.v",
+          "ModuleLine" : 1,
+          "ModuleName" : "~Basic_FIR_Filter_core.Basic_FIR_Filter_Top"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/filter_process/filter_process.sv",
+      "InstLine" : 88,
+      "InstName" : "hpf_filter",
+      "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/filter_process/iir_hpf/iir_hpf.v",
+      "ModuleLine" : 5,
+      "ModuleName" : "IIR_HPF"
+     },
+     {
+      "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/filter_process/filter_process.sv",
+      "InstLine" : 104,
+      "InstName" : "notch_gen[0].notch_filter",
+      "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/filter_process/iir_notch/iir_notch.v",
+      "ModuleLine" : 4,
+      "ModuleName" : "IIR_NOTCH"
+     },
+     {
+      "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/filter_process/filter_process.sv",
+      "InstLine" : 104,
+      "InstName" : "notch_gen[1].notch_filter",
+      "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/filter_process/iir_notch/iir_notch.v",
+      "ModuleLine" : 4,
+      "ModuleName" : "IIR_NOTCH"
+     },
+     {
+      "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/filter_process/filter_process.sv",
+      "InstLine" : 116,
+      "InstName" : "rst_iir_on_ring",
+      "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/filter_process/reset_iir_on_ring/reset_iir_on_ring.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "RESET_IIR_ON_RING"
+     }
+    ]
+   },
+   {
+    "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/top.sv",
+    "InstLine" : 71,
+    "InstName" : "dac8830",
+    "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/ad_da/dac8830.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "DAC8830",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/ad_da/dac8830.v",
+      "InstLine" : 41,
+      "InstName" : "dac_spi",
+      "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/spi/spi_master/source/SPI_Master_With_Single_CS.v",
+      "ModuleLine" : 35,
+      "ModuleName" : "SPI_Master_With_Single_CS",
+      "SubInsts" : [
+       {
+        "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/spi/spi_master/source/SPI_Master_With_Single_CS.v",
+        "InstLine" : 77,
+        "InstName" : "SPI_Master_Inst",
+        "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/spi/spi_master/source/SPI_Master.v",
+        "ModuleLine" : 33,
+        "ModuleName" : "SPI_Master"
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/top.sv",
+    "InstLine" : 83,
+    "InstName" : "decimator_200hz",
+    "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/ad_da/ads1259.v",
+    "ModuleLine" : 219,
+    "ModuleName" : "DECIMATOR"
+   },
+   {
+    "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/top.sv",
+    "InstLine" : 94,
+    "InstName" : "pan_tompkins",
+    "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins.v",
+    "ModuleLine" : 3,
+    "ModuleName" : "PAN_TOMPKINS",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins.v",
+      "InstLine" : 13,
+      "InstName" : "timer_inst",
+      "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins_utils.v",
+      "ModuleLine" : 318,
+      "ModuleName" : "MS5_TIMER"
+     },
+     {
+      "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins.v",
+      "InstLine" : 22,
+      "InstName" : "refractory_gate",
+      "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins_utils.v",
+      "ModuleLine" : 385,
+      "ModuleName" : "REFR_GATE"
+     },
+     {
+      "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins.v",
+      "InstLine" : 32,
+      "InstName" : "ecg_preprocessor",
+      "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins_utils.v",
+      "ModuleLine" : 178,
+      "ModuleName" : "PRE_PROCESSOR",
+      "SubInsts" : [
+       {
+        "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins_utils.v",
+        "InstLine" : 187,
+        "InstName" : "lpf_inst",
+        "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins_utils.v",
+        "ModuleLine" : 5,
+        "ModuleName" : "PT_IIR_LPF"
+       },
+       {
+        "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins_utils.v",
+        "InstLine" : 195,
+        "InstName" : "hpf_inst",
+        "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins_utils.v",
+        "ModuleLine" : 37,
+        "ModuleName" : "PT_IIR_HPF"
+       },
+       {
+        "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins_utils.v",
+        "InstLine" : 204,
+        "InstName" : "derivative_inst",
+        "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins_utils.v",
+        "ModuleLine" : 70,
+        "ModuleName" : "FIR_DERIVATIVE"
+       },
+       {
+        "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins_utils.v",
+        "InstLine" : 213,
+        "InstName" : "square_inst",
+        "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins_utils.v",
+        "ModuleLine" : 103,
+        "ModuleName" : "SQUARE"
+       },
+       {
+        "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins_utils.v",
+        "InstLine" : 221,
+        "InstName" : "average_inst",
+        "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins_utils.v",
+        "ModuleLine" : 145,
+        "ModuleName" : "MOVAVG_32"
+       }
+      ]
+     },
+     {
+      "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins.v",
+      "InstLine" : 43,
+      "InstName" : "findpeak",
+      "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins_utils.v",
+      "ModuleLine" : 332,
+      "ModuleName" : "FIND_PEAK"
+     },
+     {
+      "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins.v",
+      "InstLine" : 58,
+      "InstName" : "r_peak_estimator",
+      "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins_utils.v",
+      "ModuleLine" : 233,
+      "ModuleName" : "MEDIAN_9"
+     },
+     {
+      "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins.v",
+      "InstLine" : 70,
+      "InstName" : "ns_peak_estimator",
+      "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins_utils.v",
+      "ModuleLine" : 233,
+      "ModuleName" : "MEDIAN_9"
+     },
+     {
+      "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins.v",
+      "InstLine" : 82,
+      "InstName" : "rr_interval_estimator",
+      "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins_utils.v",
+      "ModuleLine" : 233,
+      "ModuleName" : "MEDIAN_9"
+     }
+    ]
+   },
+   {
+    "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/top.sv",
+    "InstLine" : 123,
+    "InstName" : "led_control",
+    "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/led/led.v",
+    "ModuleLine" : 1,
+    "ModuleName" : "LED_CONTROL"
+   },
+   {
+    "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/top.sv",
+    "InstLine" : 140,
+    "InstName" : "decimator_600hz",
+    "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/ad_da/ads1259.v",
+    "ModuleLine" : 219,
+    "ModuleName" : "DECIMATOR"
+   },
+   {
+    "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/top.sv",
+    "InstLine" : 152,
+    "InstName" : "ecg_sample_fifo",
+    "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/fifo_sc/fifo_24.v",
+    "ModuleLine" : 604,
+    "ModuleName" : "fifo_24",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/fifo_sc/fifo_24.v",
+      "InstLine" : 627,
+      "InstName" : "fifo_sc_inst",
+      "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/fifo_sc/fifo_24.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "~fifo_sc.fifo_24"
+     }
+    ]
+   },
+   {
+    "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/top.sv",
+    "InstLine" : 169,
+    "InstName" : "rr_sequence_fifo",
+    "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/fifo_sc/fifo_16.v",
+    "ModuleLine" : 184,
+    "ModuleName" : "fifo_16",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/fifo_sc/fifo_16.v",
+      "InstLine" : 207,
+      "InstName" : "fifo_sc_inst",
+      "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/fifo_sc/fifo_16.v",
+      "ModuleLine" : 1,
+      "ModuleName" : "~fifo_sc.fifo_16"
+     }
+    ]
+   },
+   {
+    "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/top.sv",
+    "InstLine" : 185,
+    "InstName" : "spi_bus",
+    "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/spi/bus_control/bus_control.v",
+    "ModuleLine" : 2,
+    "ModuleName" : "Bus_Control",
+    "SubInsts" : [
+     {
+      "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/spi/bus_control/bus_control.v",
+      "InstLine" : 35,
+      "InstName" : "spi_slave",
+      "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/spi/spi_mode0_slave/spi_slave.v",
+      "ModuleLine" : 3,
+      "ModuleName" : "SPI_Slave"
+     },
+     {
+      "InstFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/spi/bus_control/bus_control.v",
+      "InstLine" : 52,
+      "InstName" : "crc",
+      "ModuleFile" : "C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/spi/spi_mode0_slave/spi_slave.v",
+      "ModuleLine" : 103,
+      "ModuleName" : "CRC"
+     }
+    ]
+   }
+  ]
+ }
+]

@@ -1,0 +1,15 @@
+-d C:\Users\hgszh\Desktop\BioRec-One\firmware\fpga\project_gowin_v1.9.9\impl\gwsynthesis\fpga_ecg.vg
+-p GW1NR-9C-QFN88P-6
+-pn GW1NR-LV9QN88PC6/I5
+-cst C:\Users\hgszh\Desktop\BioRec-One\firmware\fpga\project_gowin_v1.9.9\src\fpga_ecg.cst
+-cfg C:\Users\hgszh\Desktop\BioRec-One\firmware\fpga\project_gowin_v1.9.9\impl\pnr\device.cfg
+-sdc C:\Users\hgszh\Desktop\BioRec-One\firmware\fpga\project_gowin_v1.9.9\src\fpga_ecg.sdc
+-bit
+-tr
+-ph
+-timing
+-cst_error
+-place_option 2
+-route_option 1
+-correct_hold 1
+-route_maxfan 23

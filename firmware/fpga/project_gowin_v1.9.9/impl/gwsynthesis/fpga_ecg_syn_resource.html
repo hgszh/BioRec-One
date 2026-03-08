@@ -1,0 +1,350 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Hierarchy Module Resource</title>
+<style type="text/css">
+body { font-family: Verdana, Arial, sans-serif; font-size: 14px; }
+div#main_wrapper{ width: 100%; }
+h1 {text-align: center; }
+h1 {margin-top: 36px; }
+table, th, td { border: 1px solid #aaa; }
+table { border-collapse:collapse; margin-top: 10px; margin-bottom: 20px; width: 100%; }
+th, td { align = "center"; padding: 5px 2px 5px 5px; }
+th { color: #fff; font-weight: bold; background-color: #0084ff; }
+table td.label { width: 20%; white-space: nowrap; min-width: 20px; background-color: #dee8f4; }
+</style>
+</head>
+<body>
+<div id="main_wrapper">
+<div id="content">
+<h1>Hierarchy Module Resource</h1>
+<table>
+<tr>
+<th class="label">MODULE NAME</th>
+<th class="label">REG NUMBER</th>
+<th class="label">ALU NUMBER</th>
+<th class="label">LUT NUMBER</th>
+<th class="label">DSP NUMBER</th>
+<th class="label">BSRAM NUMBER</th>
+<th class="label">SSRAM NUMBER</th>
+</tr>
+<tr>
+<td class="label">top (C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/top.sv)</td>
+<td align = "center">13</td>
+<td align = "center">-</td>
+<td align = "center">29</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp|--ads1259
+ (C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/top.sv)</td>
+<td align = "center">89</td>
+<td align = "center">-</td>
+<td align = "center">88</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--ads1259_spi
+ (C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/ad_da/ads1259.v)</td>
+<td align = "center">36</td>
+<td align = "center">-</td>
+<td align = "center">44</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp|--afe_fast_recovery
+ (C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/top.sv)</td>
+<td align = "center">34</td>
+<td align = "center">-</td>
+<td align = "center">75</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp|--filter_process
+ (C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/top.sv)</td>
+<td align = "center">29</td>
+<td align = "center">-</td>
+<td align = "center">126</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--lpf_filter
+ (C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/filter_process/filter_process.sv)</td>
+<td align = "center">80</td>
+<td align = "center">-</td>
+<td align = "center">143</td>
+<td align = "center">-</td>
+<td align = "center">2</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--basic_fir_filter_inst
+ (C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/filter_process/fir_lpf/fir_lpf.sv)</td>
+<td align = "center">303</td>
+<td align = "center">25</td>
+<td align = "center">283</td>
+<td align = "center">4</td>
+<td align = "center">4</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--hpf_filter
+ (C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/filter_process/filter_process.sv)</td>
+<td align = "center">120</td>
+<td align = "center">767</td>
+<td align = "center">78</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--notch_gen[0].notch_filter
+ (C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/filter_process/filter_process.sv)</td>
+<td align = "center">120</td>
+<td align = "center">552</td>
+<td align = "center">42</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--notch_gen[1].notch_filter
+ (C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/filter_process/filter_process.sv)</td>
+<td align = "center">120</td>
+<td align = "center">552</td>
+<td align = "center">42</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--rst_iir_on_ring
+ (C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/filter_process/filter_process.sv)</td>
+<td align = "center">87</td>
+<td align = "center">268</td>
+<td align = "center">135</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp|--dac8830
+ (C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/top.sv)</td>
+<td align = "center">11</td>
+<td align = "center">-</td>
+<td align = "center">13</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--dac_spi
+ (C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/ad_da/dac8830.v)</td>
+<td align = "center">7</td>
+<td align = "center">-</td>
+<td align = "center">16</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--SPI_Master_Inst
+ (C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/spi/spi_master/source/SPI_Master_With_Single_CS.v)</td>
+<td align = "center">26</td>
+<td align = "center">-</td>
+<td align = "center">31</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp|--decimator_200hz
+ (C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/top.sv)</td>
+<td align = "center">18</td>
+<td align = "center">-</td>
+<td align = "center">7</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp|--pan_tompkins
+ (C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/top.sv)</td>
+<td align = "center">111</td>
+<td align = "center">128</td>
+<td align = "center">53</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--timer_inst
+ (C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins.v)</td>
+<td align = "center">32</td>
+<td align = "center">31</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--refractory_gate
+ (C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins.v)</td>
+<td align = "center">33</td>
+<td align = "center">60</td>
+<td align = "center">2</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--ecg_preprocessor
+ (C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins.v)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--lpf_inst
+ (C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins_utils.v)</td>
+<td align = "center">20</td>
+<td align = "center">54</td>
+<td align = "center">37</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">6</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--hpf_inst
+ (C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins_utils.v)</td>
+<td align = "center">55</td>
+<td align = "center">48</td>
+<td align = "center">47</td>
+<td align = "center">-</td>
+<td align = "center">1</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--derivative_inst
+ (C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins_utils.v)</td>
+<td align = "center">37</td>
+<td align = "center">39</td>
+<td align = "center">15</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">3</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--square_inst
+ (C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins_utils.v)</td>
+<td align = "center">70</td>
+<td align = "center">90</td>
+<td align = "center">90</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--average_inst
+ (C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins_utils.v)</td>
+<td align = "center">30</td>
+<td align = "center">36</td>
+<td align = "center">53</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">10</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--findpeak
+ (C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins.v)</td>
+<td align = "center">70</td>
+<td align = "center">64</td>
+<td align = "center">29</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--r_peak_estimator
+ (C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins.v)</td>
+<td align = "center">241</td>
+<td align = "center">-</td>
+<td align = "center">406</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--ns_peak_estimator
+ (C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins.v)</td>
+<td align = "center">241</td>
+<td align = "center">-</td>
+<td align = "center">408</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--rr_interval_estimator
+ (C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/pan_tompkins/pan_tompkins.v)</td>
+<td align = "center">241</td>
+<td align = "center">-</td>
+<td align = "center">408</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp|--led_control
+ (C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/top.sv)</td>
+<td align = "center">64</td>
+<td align = "center">22</td>
+<td align = "center">97</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp|--decimator_600hz
+ (C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/top.sv)</td>
+<td align = "center">27</td>
+<td align = "center">-</td>
+<td align = "center">4</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp|--ecg_sample_fifo
+ (C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/top.sv)</td>
+<td align = "center">47</td>
+<td align = "center">14</td>
+<td align = "center">83</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">24</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp|--rr_sequence_fifo
+ (C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/top.sv)</td>
+<td align = "center">30</td>
+<td align = "center">8</td>
+<td align = "center">17</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">4</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp|--spi_bus
+ (C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/top.sv)</td>
+<td align = "center">82</td>
+<td align = "center">-</td>
+<td align = "center">244</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--spi_slave
+ (C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/spi/bus_control/bus_control.v)</td>
+<td align = "center">46</td>
+<td align = "center">-</td>
+<td align = "center">23</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+<td class="label">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|--crc
+ (C:/Users/hgszh/Desktop/BioRec-One/firmware/fpga/project_gowin_v1.9.9/src/spi/bus_control/bus_control.v)</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">17</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+<td align = "center">-</td>
+</tr>
+</table>
+</div><!-- content -->
+</div><!-- main_wrapper -->
+</body>
+</html>

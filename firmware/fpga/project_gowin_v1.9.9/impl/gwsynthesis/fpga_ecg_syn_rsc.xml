@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module name="top" Register="13" Lut="29">
+    <SubModule name="ads1259" Register="89" Lut="88">
+        <SubModule name="ads1259_spi" Register="36" Lut="44"/>
+    </SubModule>
+    <SubModule name="afe_fast_recovery" Register="34" Lut="75"/>
+    <SubModule name="filter_process" Register="29" Lut="126">
+        <SubModule name="lpf_filter" Register="80" Lut="143" Bsram="2">
+            <SubModule name="basic_fir_filter_inst" Register="303" Alu="25" Lut="283" MULT36X36="2" ALU54D="2" Bsram="4"/>
+        </SubModule>
+        <SubModule name="hpf_filter" Register="120" Alu="767" Lut="78"/>
+        <SubModule name="notch_gen[0].notch_filter" Register="120" Alu="552" Lut="42"/>
+        <SubModule name="notch_gen[1].notch_filter" Register="120" Alu="552" Lut="42"/>
+        <SubModule name="rst_iir_on_ring" Register="87" Alu="268" Lut="135"/>
+    </SubModule>
+    <SubModule name="dac8830" Register="11" Lut="13">
+        <SubModule name="dac_spi" Register="7" Lut="16">
+            <SubModule name="SPI_Master_Inst" Register="26" Lut="31"/>
+        </SubModule>
+    </SubModule>
+    <SubModule name="decimator_200hz" Register="18" Lut="7"/>
+    <SubModule name="pan_tompkins" Register="111" Alu="128" Lut="53">
+        <SubModule name="timer_inst" Register="32" Alu="31" Lut="1"/>
+        <SubModule name="refractory_gate" Register="33" Alu="60" Lut="2"/>
+        <SubModule name="ecg_preprocessor">
+            <SubModule name="lpf_inst" Register="20" Alu="54" Lut="37" Ssram="6"/>
+            <SubModule name="hpf_inst" Register="55" Alu="48" Lut="47" Bsram="1"/>
+            <SubModule name="derivative_inst" Register="37" Alu="39" Lut="15" Ssram="3"/>
+            <SubModule name="square_inst" Register="70" Alu="90" Lut="90"/>
+            <SubModule name="average_inst" Register="30" Alu="36" Lut="53" Ssram="10"/>
+        </SubModule>
+        <SubModule name="findpeak" Register="70" Alu="64" Lut="29"/>
+        <SubModule name="r_peak_estimator" Register="241" Lut="406"/>
+        <SubModule name="ns_peak_estimator" Register="241" Lut="408"/>
+        <SubModule name="rr_interval_estimator" Register="241" Lut="408"/>
+    </SubModule>
+    <SubModule name="led_control" Register="64" Alu="22" Lut="97"/>
+    <SubModule name="decimator_600hz" Register="27" Lut="4"/>
+    <SubModule name="ecg_sample_fifo" Register="47" Alu="14" Lut="83" Ssram="24"/>
+    <SubModule name="rr_sequence_fifo" Register="30" Alu="8" Lut="17" Ssram="4"/>
+    <SubModule name="spi_bus" Register="82" Lut="244">
+        <SubModule name="spi_slave" Register="46" Lut="23"/>
+        <SubModule name="crc" Lut="17"/>
+    </SubModule>
+</Module>

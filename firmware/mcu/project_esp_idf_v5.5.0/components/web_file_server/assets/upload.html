@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>ECG File Server</title>
+  <link href="/styles.css" rel="stylesheet" />
+</head>
+
+<div class="upload-header link-white">
+  <div class="header-left" id="return-button">
+    <svg xmlns="http://www.w3.org/2000/svg" width=".75em" height="1.5em" viewBox="0 0 12 24">
+      <path fill="currentColor" fill-rule="evenodd"
+        d="m3.343 12l7.071 7.071L9 20.485l-7.778-7.778a1 1 0 0 1 0-1.414L9 3.515l1.414 1.414z" />
+    </svg>
+  </div>
+  <div class="header-center">ECG File Server</div>
+  <div class="header-right">
+    <span id="remain"></span>
+  </div>
+</div>
+
+<div style="margin-bottom: 3em"></div>
+
+<noscript> Please enable JavaScript to upload. </noscript>
+
+<div id="uploadArea" class="upload-area">
+  Drag & Drop a file here or click to browse
+</div>
+
+<div id="uploadForm" class="upload-form">
+  <table class="w100">
+    <tr>
+      <td>
+        <label for="uploadPath">Upload Path:</label>
+      </td>
+      <td>
+        <input type="text" id="uploadPath" class="w100" />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="fileName">File Name:</label>
+      </td>
+      <td>
+        <input type="text" id="fileName" maxlength="32" class="w100" />
+      </td>
+    </tr>
+  </table>
+
+  <div id="pathError" class="error"></div>
+  <div id="nameError" class="error"></div>
+
+  <button id="uploadButton" disabled style="margin: 10px auto; width: 100%">
+    Upload
+  </button>
+  <div id="progress" style="margin-top: 15px; text-align: center"></div>
+</div>
+
+<script>
+  /* Max size of an individual file. Make sure this
+   * value is same as that set in file_server.c */
+  const MAX_FILE_SIZE = 4096 * 1024 * 1024;
+  const uploadArea = document.getElementById("uploadArea");
+  const uploadForm = document.getElementById("uploadForm");
+  const uploadPathInput = document.getElementById("uploadPath");
+  const fileNameInput = document.getElementById("fileName");
+  const pathError = document.getElementById("pathError");
+  const nameError = document.getElementById("nameError");
+  const uploadButton = document.getElementById("uploadButton");
+  const progressDiv = document.getElementById("progress");
+  let selectedFile = null;
+
+  function getUploadPath() {
+    const hash = window.location.hash;
+    if (hash !== null && hash !== "" && hash !== "#") {
+      if (hash.startsWith("#")) {
+        return decodeURIComponent(hash.substring(1));
+      } else {
+        return decodeURIComponent(hash);
+      }
+    } else return "/";
+  }
+  document.getElementById("return-button").addEventListener("click", () => {
+    window.location = getUploadPath();
+  });
+
+  // Initialize
+  uploadPathInput.value = getUploadPath();
+
+  // Drag & drop functionality
+  uploadArea.addEventListener("dragover", (e) => {
+    e.preventDefault();
+    uploadArea.classList.add("drag-over");
+  });
+  uploadArea.addEventListener("dragleave", () => {
+    uploadArea.classList.remove("drag-over");
+  });
+  uploadArea.addEventListener("drop", (e) => {
+    e.preventDefault();
+    uploadArea.classList.remove("drag-over");
+    handleFile(e.dataTransfer.files[0]);
+  });
+
+  // Click to upload
+  uploadArea.addEventListener("click", () => {
+    const input = document.createElement("input");
+    input.type = "file";
+    input.onchange = (e) => handleFile(e.target.files[0]);
+    input.click();
+  });
+
+  // Handle file selection
+  function handleFile(file) {
+    if (!file) return;
+    if (file.size > MAX_FILE_SIZE) {
+      alert(
+        `File is too large! Maximum file size is ${MAX_FILE_SIZE / 1024 / 1024
+        } MB`
+      );
+      return;
+    }
+    selectedFile = file;
+    uploadArea.innerHTML = `
+          <div><code>${file.name}</code></div>
+          <div>File Size: ${(file.size / 1024).toFixed(2)} KB</div>
+          <div>(Click here to change the file)</div>
+        `;
+    uploadForm.style.display = "block";
+    fileNameInput.value = file.name;
+    validateInputs();
+  }
+
+  // Calculate UTF-8 byte length of a string
+  function getByteLength(str) {
+    return new TextEncoder().encode(str).length;
+  }
+
+  // Check for invalid filesystem characters
+  function hasInvalidPathChars(path) {
+    // Invalid characters for paths: control chars, <, >, :, ", |, ?, *, \
+    return /[\x00-\x1f<>:"|?*\\]/.test(path);
+  }
+
+  function hasInvalidFileNameChars(fileName) {
+    // Invalid characters for filenames: control chars, <, >, :, ", |, ?, *, \, /
+    return /[\x00-\x1f<>:"|?*\\/]/.test(fileName);
+  }
+
+  function validateInputs() {
+    const uploadPath = uploadPathInput.value;
+    const fileName = fileNameInput.value;
+
+    // Validate upload path
+    if (
+      !uploadPath.startsWith("/") ||
+      !uploadPath.endsWith("/") ||
+      hasInvalidPathChars(uploadPath) ||
+      uploadPath.startsWith("/upload/") ||
+      uploadPath.startsWith("/api/") ||
+      /\/\//.test(uploadPath) ||
+      getByteLength(uploadPath) > 255
+    ) {
+      pathError.textContent = "Invalid upload path. Path must start and end with /, contain no invalid characters, not exceed 255 bytes, and not start with /upload/ or /api/.";
+    } else {
+      pathError.textContent = "";
+    }
+
+    // Validate file name
+    if (
+      hasInvalidFileNameChars(fileName) ||
+      getByteLength(fileName) > 64 ||
+      fileName === "upload.html" ||
+      fileName === "api" ||
+      fileName.trim() !== fileName ||
+      fileName.endsWith(".") ||
+      fileName === "" ||
+      fileName === "." ||
+      fileName === ".."
+    ) {
+      nameError.textContent = "Invalid file name. Must not contain invalid characters (< > : \" | ? * \\ /), not exceed 64 bytes, and not be a reserved name.";
+    } else {
+      nameError.textContent = "";
+    }
+
+    uploadButton.disabled =
+      pathError.textContent || nameError.textContent || !selectedFile;
+  }
+
+  uploadPathInput.addEventListener("input", validateInputs);
+  fileNameInput.addEventListener("input", validateInputs);
+
+  uploadButton.addEventListener("click", async () => {
+    if (!selectedFile) return;
+    const uploadPath = uploadPathInput.value;
+    const fileName = fileNameInput.value;
+
+    const url = `/upload${uploadPath}${fileName}`;
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", url, true);
+
+    uploadButton.disabled = true;
+    uploadPathInput.disabled = true;
+    fileNameInput.disabled = true;
+
+    let last_loaded = 0;
+    let last_time = Date.now();
+    xhr.upload.onprogress = (event) => {
+      if (event.lengthComputable) {
+        // --- 计算完成百分比 ---
+        const percentComplete = Math.round((event.loaded / event.total) * 100);
+        // --- 计算速率 ---
+        const current_time = Date.now();
+        const time_diff_s = (current_time - last_time) / 1000; // 时间差
+        const data_diff_b = event.loaded - last_loaded; // 数据量差
+        let speed_kbps = 0;
+        if (time_diff_s > 0) {
+          speed_kbps = (data_diff_b / time_diff_s) / 1024; // 速率 KB/s
+        }
+        last_loaded = event.loaded;        // 更新记录，为下一次计算做准备
+        last_time = current_time;
+
+        progressDiv.textContent = `Uploading... ${percentComplete}% (${speed_kbps.toFixed(1)} KB/s)`;
+      } else {
+        progressDiv.textContent = `Uploading...`;
+      }
+    };
+
+
+
+    //  xhr.onload with English prompts and auto-reload
+    xhr.onload = async () => {
+      // A successful upload redirects (303), and the browser then auto-GETs the new page, resulting in a final status of 200.
+      if (xhr.status === 200 || xhr.status === 303) {
+        alert("Upload complete!");
+        // Reload the page that shows the file list
+        window.location.href = uploadPathInput.value;
+      } else if (xhr.status === 503) {
+        alert("Upload failed: The server is busy. Please wait for the current operation to finish and try again.");
+        progressDiv.textContent = "Server busy. Please try again.";
+        // Restore UI on failure
+        uploadButton.disabled = false;
+        uploadPathInput.disabled = false;
+        fileNameInput.disabled = false;
+      } else {
+        // Other HTTP errors
+        alert("Upload failed: " + xhr.responseText);
+        progressDiv.textContent = "Upload failed.";
+        // Restore UI on failure
+        uploadButton.disabled = false;
+        uploadPathInput.disabled = false;
+        fileNameInput.disabled = false;
+      }
+    };
+
+    // xhr.onerror with English prompts
+    xhr.onerror = () => {
+      // Network-level errors
+      alert("Upload failed: A network error occurred.");
+      progressDiv.textContent = "Network error.";
+      // Restore UI on failure
+      uploadButton.disabled = false;
+      uploadPathInput.disabled = false;
+      fileNameInput.disabled = false;
+    };
+
+    xhr.send(selectedFile);
+  });
+</script>

@@ -1,0 +1,60 @@
+*************************** START ****************************
+Chip: ESP32S3
+Download mode: uart
+Start time: 20260308-22:05
+Connect baud: 115200
+Com:COM20
+connecting...
+manufacturer_id: 0x46
+device_id: 0x4018
+com closed
+Total use time: 6 s
+Download result: PASS
+*************************** END ****************************
+
+*************************** START ****************************
+Chip: ESP32S3
+Download mode: uart
+Start time: 20260308-22:06
+Connect baud: 115200
+Com:COM20
+connecting...
+manufacturer_id: 0x46
+device_id: 0x4018
+fs:0x200200
+address/file: 0 C:\Users\hgszh\Desktop\BioRec-One\firmware\mcu\flash_bin\flash_download_tool\dl_temp\bin_tmp\downloadPanel1\merged-flash.bin
+Wrote 2146832 bytes (1463680 compressed) at 0x00000000 in 129.7 seconds (effective 132.4 kbit/s)...
+File: C:\Users\hgszh\Desktop\BioRec-One\firmware\mcu\flash_bin\flash_download_tool\dl_temp\bin_tmp\downloadPanel1\merged-flash.bin
+File  md5: 1d4e62a7b1c5162dbedae55c0705bdae
+Flash md5: 1d4e62a7b1c5162dbedae55c0705bdae
+Hash of data verified.
+
+Leaving...
+com closed
+Total use time: 136 s
+Download result: PASS
+*************************** END ****************************
+
+*************************** START ****************************
+Chip: ESP32S3
+Download mode: uart
+Start time: 20260308-22:42
+Connect baud: 115200
+Com:COM20
+connecting...
+manufacturer_id: 0x46
+device_id: 0x4018
+fs:0x200200
+address/file: 0 C:\Users\hgszh\Desktop\BioRec-One\firmware\mcu\flash_bin\flash_download_tool\dl_temp\bin_tmp\downloadPanel1\merged-flash.bin
+Wrote 2146832 bytes (1463673 compressed) at 0x00000000 in 19.9 seconds (effective 861.3 kbit/s)...
+File: C:\Users\hgszh\Desktop\BioRec-One\firmware\mcu\flash_bin\flash_download_tool\dl_temp\bin_tmp\downloadPanel1\merged-flash.bin
+File  md5: 4efd2ba8cb8b7e5ca1ba0ac04c72dac6
+Flash md5: 4efd2ba8cb8b7e5ca1ba0ac04c72dac6
+Hash of data verified.
+
+Leaving...
+com closed
+Total use time: 26 s
+Download result: PASS
+*************************** END ****************************
+
