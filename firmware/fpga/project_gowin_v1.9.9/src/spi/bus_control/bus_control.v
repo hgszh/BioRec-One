@@ -168,8 +168,7 @@ module Bus_Control (
                             CMD_RRSQ: begin
                                 if (fifo_read_req) begin  // 第2拍：标志位为1，说明数据已准备好
                                     fsm_state <= S_WAIT_RRSQ_SEND_BYTE;
-                                    payload_cnt <= 
-                                     - 6'd1;
+                                    payload_cnt <= payload_cnt - 6'd1;
                                     payload_byte_cnt <= 2'd1;
                                     fifo_read_req <= 1'b0;  // 清除标志位
                                 end
