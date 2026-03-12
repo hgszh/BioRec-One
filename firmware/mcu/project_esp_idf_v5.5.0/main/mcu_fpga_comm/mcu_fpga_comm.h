@@ -30,7 +30,7 @@ typedef enum {
     CMD_RREG = 0x02,   // 读寄存器
     CMD_RRSQ = 0x03,   // 读RR序列
     CMD_ECGS = 0x04,   // 读ECG样本
-    CMD_REST = 0x05
+    CMD_REST = 0x05    // 复位FPGA
 } spi_type_t;
 
 typedef enum { LPF_CUTOFF_40HZ = 0, LPF_CUTOFF_100HZ = 1, LPF_CUTOFF_200HZ = 2 } lpf_cutoff_t;
