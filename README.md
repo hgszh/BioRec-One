@@ -73,7 +73,7 @@
 
 5. 装配：屏幕一角可焊铜柱支撑，主板安装孔可焊四个铜柱作脚垫。
 
-6. 完成复刻后，阅读 [07 使用说明](https://github.com/chirpyjay/BioRec-One/wiki/07-%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E)
+6. 完成复刻后，阅读 [07 使用说明](https://github.com/chirpyjay/BioRec-One/wiki/07-%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E) 。
 
 ------
 
