@@ -57,7 +57,7 @@ A single-channel biopotential recorder designed for educational demonstration. T
 
 ## Build Guide
 
-**Main components:** main board, AFE module, isolated power supply module (3 PCBs total); display module; Tang Nano 9K development board.
+**Main components:** main board, AFE module, isolated power supply module (3 PCBs total); display module; [Tang Nano 9K development board](https://wiki.sipeed.com/hardware/zh/tang/Tang-Nano-9K/Nano-9K.html) .
 
 1. Go to the `hardware/` directory, order PCBs for each of the three subdirectories, and purchase and solder components according to the EasyEDA Pro projects.
 

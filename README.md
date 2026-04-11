@@ -59,7 +59,7 @@
 
 ## 复刻说明
 
-**主要组成**：主板、AFE模块、隔离电源模块（共3块PCB）；屏幕模块；Tangnano9K开发板。
+**主要组成**：主板、AFE模块、隔离电源模块（共3块PCB）；屏幕模块； [Sipeed Tang Nano 9K开发板](https://wiki.sipeed.com/hardware/zh/tang/Tang-Nano-9K/Nano-9K.html) 。
 
 1. 在 `hardware/` 目录找到3个子目录，分别下单PCB，并按照立创EDA工程购买元器件焊接。
 
