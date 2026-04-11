@@ -1,5 +1,7 @@
 # BioRec-One
 
+[English](./README_EN.md)
+
 <p align="center">
 <img src="https://github.com/chirpyjay/BioRec-One/wiki/6.jpg"  width="600" />
 </p>
