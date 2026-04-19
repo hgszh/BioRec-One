@@ -11,17 +11,18 @@ authors:
   - given-names: Zihang
     family-names: Shi
     email: hgszh@outlook.com
-repository-code: 'https://github.com/chirpyjay/BioRec-One'
-url: 'https://github.com/chirpyjay/BioRec-One/wiki'
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.19648575
 abstract: >-
   A DIY single-channel biopotential recorder for
   ECG/EMG/EEG, built with discrete components.
 keywords:
-  - ECG
-  - ESP32
-  - bioamp
-  - pan-tompkins
+  - ecg
   - biosignal
+  - bioamp
+  - ' pan-tompkins'
+  - esp32
 license: CERN-OHL-P-2.0
-version: 1.0.0
+version: v1.0.0
 date-released: '2026-04-19'
