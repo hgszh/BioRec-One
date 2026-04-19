@@ -1,3 +1,8 @@
+[![DOI](https://zenodo.org/badge/1176123295.svg)](https://doi.org/10.5281/zenodo.19648574)
+[![Hardware: CERN-OHL-P](https://img.shields.io/badge/Hardware-CERN--OHL--P%20v2-blue)](https://ohwr.org/cern_ohl_p_v2.txt)
+[![Software: MIT](https://img.shields.io/badge/Software-MIT-green)](https://opensource.org/licenses/MIT)
+[![Docs: CC BY 4.0](https://img.shields.io/badge/Docs-CC--BY%204.0-orange)](https://creativecommons.org/licenses/by/4.0/)
+
 # BioRec-One
 
 [中文](./README_ZH.md)
