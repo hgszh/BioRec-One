@@ -1,0 +1,27 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: BioRec-One
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Zihang
+    family-names: Shi
+    email: hgszh@outlook.com
+repository-code: 'https://github.com/chirpyjay/BioRec-One'
+url: 'https://github.com/chirpyjay/BioRec-One/wiki'
+abstract: >-
+  A DIY single-channel biopotential recorder for
+  ECG/EMG/EEG, built with discrete components.
+keywords:
+  - ECG
+  - ESP32
+  - bioamp
+  - pan-tompkins
+  - biosignal
+license: CERN-OHL-P-2.0
+version: 1.0.0
+date-released: '2026-04-19'
