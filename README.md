@@ -22,6 +22,7 @@ A single-channel biopotential recorder designed for educational demonstration. T
 - Analog front end built from discrete components — no monolithic ASIC, making it well-suited for teaching and demonstration
 - Gain of 61.78 dB (×1228)
 - Equivalent input noise density of 18.8 nV/√Hz; 266 nV RMS over a 200 Hz bandwidth
+- Full-scale input of 2 mVpp; dynamic range of 77.7 dB
 - Bandwidth 0.05–200 Hz; high-pass cutoff switchable between 0.05 Hz and 1.5 Hz; multiple digital filter modes available
 - Isolated power supply for common-mode interference rejection
 - FPGA-based FIR/IIR filtering and Pan-Tompkins heart rate detection
