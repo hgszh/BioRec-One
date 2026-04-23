@@ -47,9 +47,10 @@ A single-channel biopotential recorder designed for educational demonstration. T
 <p align="center">
 <img src="https://github.com/chirpyjay/BioRec-One/wiki/59.gif"  width="500" />
 </p>
-
 <p align="center">
 <img src="https://github.com/chirpyjay/BioRec-One/wiki/79.jpg"  width="500" />
+</p> 
+<p align="center">
 <img src="https://github.com/chirpyjay/BioRec-One/wiki/79_1.jpg"  width="500" />
 </p>
 
